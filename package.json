@@ -1,0 +1,28 @@
+{
+  "private": true,
+  "name": "@rbxts/syn-utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {},
+  "keywords": [],
+  "author": "dev-syn",
+  "license": "ISC",
+  "types": "out/index.d.ts",
+  "files": [
+    "out",
+    "!**/*.tsbuildinfo"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@rbxts/compiler-types": "^2.2.0-types.0",
+    "@rbxts/types": "^1.0.738",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "typedoc": "^0.25.7",
+    "typedoc-material-theme": "^1.0.2"
+  }
+}
