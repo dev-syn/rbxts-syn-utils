@@ -11,7 +11,7 @@
   "types": "out/index.d.ts",
   "files": [
     "out/**/*.lua",
-    "out/**.d.ts",
+    "out/**/*.d.ts",
     "!**/*.tsbuildinfo"
   ],
   "publishConfig": {
