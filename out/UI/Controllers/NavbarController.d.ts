@@ -5,7 +5,11 @@
  *
  * This is a UI Controller designed to control a Navigation Bar.
  */
-declare class NavBarController<T extends Frame | ScrollingFrame, NavigationFrames extends Map<string, Frame>> {
+declare class NavBarController<
+/** The Frame or ScrollingFrame that is the Navbar. */
+T extends Frame | ScrollingFrame, 
+/** A map that stores a Navigation key to a Navigation Frame. */
+NavigationFrames extends Map<string, Frame>> {
     /**
      * The NavBar Instance that contains the navigation buttons normally with a UIListLayout but not required.
      * @typeParam T - The Frame | ScrollingFrame that contains the nav buttons
