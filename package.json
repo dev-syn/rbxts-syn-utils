@@ -10,7 +10,8 @@
   "license": "ISC",
   "types": "out/index.d.ts",
   "files": [
-    "out/**/*",
+    "out/**/*.lua",
+    "out/**.d.ts",
     "!**/*.tsbuildinfo"
   ],
   "publishConfig": {
