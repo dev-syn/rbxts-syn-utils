@@ -4,7 +4,9 @@
  * This is a UI Controller designed to control a Navigation Bar.
  */
 class NavBarController<
+    /** The Frame or ScrollingFrame that is the Navbar. */
     T extends Frame | ScrollingFrame,
+    /** A map that stores a Navigation key to a Navigation Frame. */
     NavigationFrames extends Map<string,Frame>>
 {
     /**
