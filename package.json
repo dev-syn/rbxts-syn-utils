@@ -10,9 +10,14 @@
   "license": "ISC",
   "types": "out/index.d.ts",
   "files": [
-    "out",
+    "out/**/*.lua",
+    "out/**/*.d.ts",
     "!**/*.tsbuildinfo"
   ],
+  "exports": {
+    "./UI": "./out/UI",
+    "./Controllers": "./out/UI/Controllers/"
+  },
   "publishConfig": {
     "access": "public"
   },
