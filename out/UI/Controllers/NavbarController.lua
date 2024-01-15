@@ -59,6 +59,10 @@ do
 		end
 	end
 	function NavBarController:assignFrame(navBtn, frame)
+		local _navigationableFrames = self.NavigationableFrames
+		local _navBtn = navBtn
+		local _frame = frame
+		_navigationableFrames[_navBtn] = _frame
 		navBtn.MouseButton1Click:Connect(function()
 			if self.CurrentFrame and self.CurrentFrame ~= frame then
 				self.CurrentFrame.Visible = false
