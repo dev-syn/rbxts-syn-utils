@@ -6,8 +6,8 @@
 class NavBarController<
     /** The Frame or ScrollingFrame that is the Navbar. */
     T extends Frame | ScrollingFrame,
-    /** A map that stores a Navigation key to a Navigation Frame. */
-    NavigationFrames extends Map<string,Frame>>
+    /** A map that stores the Navigation button to a Navigation Frame. */
+    NavigationFrames extends Map<TextButton,Frame | ScrollingFrame>>
 {
     /**
      * The NavBar Instance that contains the navigation buttons normally with a UIListLayout but not required.
@@ -21,7 +21,7 @@ class NavBarController<
     CurrentFrame?: Frame | ScrollingFrame;
     
     /**
-     * This is a dictionary structure that contains the navigation keys to their respective Frame Instances.
+     * This is a dictionary structure that contains the navigation buttons to their respective Frame Instances.
      */
     NavigationableFrames: NavigationFrames;
 
@@ -91,7 +91,7 @@ class NavBarController<
      * @param frame The frame instance that belongs to the navBtn
      */
     assignFrame(navBtn: TextButton,frame: Frame | ScrollingFrame) {
-
+        this.NavigationableFrames.set(navBtn,frame);
         navBtn.MouseButton1Click.Connect(() => {
             if (this.CurrentFrame && this.CurrentFrame !== frame) {
                 this.CurrentFrame.Visible = false;
