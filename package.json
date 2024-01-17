@@ -3,7 +3,7 @@
   "name": "@rbxts/syn-utils",
   "version": "1.0.0",
   "description": "",
-  "main": "out/index.lua",
+  "main": "out/init.lua",
   "scripts": {},
   "keywords": [],
   "author": "dev-syn",
