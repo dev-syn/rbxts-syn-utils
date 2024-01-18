@@ -27,9 +27,7 @@ do
 		for _, child in self.NavBar:GetChildren() do
 			if child:IsA("GuiObject") then
 				local uiObject = child
-				if uiObjects[uiObject] ~= nil then
-					uiObject.Visible = true
-				end
+				uiObject.Visible = if uiObject ~= self.MainBtn then uiObjects[uiObject] ~= nil else true
 			end
 		end
 	end
