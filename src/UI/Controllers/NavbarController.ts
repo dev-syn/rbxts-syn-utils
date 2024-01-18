@@ -39,14 +39,14 @@ class NavBarController<
     }
 
     /**
-     * Shows the given buttons inside the NavBar.
+     * Shows the given buttons inside the NavBar and hides all the others, excluding the MainBtn if assigned.
      * @param uiObjects - A dictionary which keys are the UI Objects and the value is true, the UI Objects are then shown.
      */
     showButtons(uiObjects: Map<GuiObject,true>) {
         for (const child of this.NavBar.GetChildren()) {
             if (child.IsA("GuiObject")) {
                 const uiObject = child as GuiObject;
-                if (uiObjects.has(uiObject)) uiObject.Visible = true;
+                uiObject.Visible = uiObject !== this.MainBtn ? uiObjects.has(uiObject) : true;
             }
         }
     }
