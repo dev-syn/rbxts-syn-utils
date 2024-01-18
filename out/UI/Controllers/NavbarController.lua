@@ -69,5 +69,18 @@ do
 			self.CurrentFrame = frame
 		end)
 	end
+	function NavBarController:showFrame(navBtn)
+		local _navigationableFrames = self.NavigationableFrames
+		local _navBtn = navBtn
+		local navFrame = _navigationableFrames[_navBtn]
+		if not navFrame then
+			return nil
+		end
+		if self.CurrentFrame then
+			self.CurrentFrame.Visible = false
+		end
+		self.CurrentFrame = navFrame
+		navFrame.Visible = true
+	end
 end
 return NavBarController

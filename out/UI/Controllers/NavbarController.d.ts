@@ -54,5 +54,10 @@ NavigationFrames extends Map<TextButton, Frame | ScrollingFrame>> {
      * @param frame The frame instance that belongs to the navBtn
      */
     assignFrame(navBtn: TextButton, frame: Frame | ScrollingFrame): void;
+    /**
+     * Shows a navigation frame using the given navBtn.
+     * @param navBtn The navBtn that is associated to a nav frame.
+     */
+    showFrame(navBtn: TextButton): void;
 }
 export = NavBarController;
