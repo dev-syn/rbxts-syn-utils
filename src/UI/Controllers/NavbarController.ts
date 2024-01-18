@@ -101,6 +101,20 @@ class NavBarController<
         });
     }
 
+    /**
+     * Shows a navigation frame using the given navBtn.
+     * @param navBtn The navBtn that is associated to a nav frame.
+     */
+    showFrame(navBtn: TextButton) {
+        const navFrame: Frame | ScrollingFrame | undefined = this.NavigationableFrames.get(navBtn);
+        if (!navFrame) return;
+
+        if (this.CurrentFrame) this.CurrentFrame.Visible = false;
+
+        this.CurrentFrame = navFrame;
+        navFrame.Visible = true;
+    }
+
 };
 
 export = NavBarController;
