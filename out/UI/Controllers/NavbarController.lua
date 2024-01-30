@@ -25,7 +25,7 @@ do
 	end
 	function NavBarController:showButtons(uiObjects)
 		for _, child in self.NavBar:GetChildren() do
-			if child:IsA("GuiObject") then
+			if child:IsA("TextButton") or child:IsA("ImageButton") then
 				local uiObject = child
 				uiObject.Visible = if uiObject ~= self.MainBtn then table.find(uiObjects, uiObject) ~= nil else true
 			end
@@ -33,7 +33,7 @@ do
 	end
 	function NavBarController:hideButtons(uiObjects)
 		for _, child in self.NavBar:GetChildren() do
-			if child:IsA("GuiObject") then
+			if child:IsA("TextButton") or child:IsA("ImageButton") then
 				local uiObject = child
 				if table.find(uiObjects, uiObject) ~= nil then
 					-- If a MainBtn exist, check if the ui is the main button and prevent visibility change
