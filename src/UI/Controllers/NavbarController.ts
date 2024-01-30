@@ -1,3 +1,5 @@
+type Button = TextButton | ImageButton;
+
 /**
  * **NavBarController**
  * 
@@ -42,10 +44,10 @@ class NavBarController<
      * Shows the given buttons inside the NavBar and hides all the others, excluding the MainBtn if assigned.
      * @param uiObjects - An array of GuiObjects to be shown. Any GuiObject in the NavBar that is not included will be hidden.
      */
-    showButtons(uiObjects: GuiObject[]) {
+    showButtons(uiObjects: Button[]) {
         for (const child of this.NavBar.GetChildren()) {
-            if (child.IsA("GuiObject")) {
-                const uiObject = child as GuiObject;
+            if (child.IsA("TextButton") || child.IsA("ImageButton")) {
+                const uiObject = child as Button;
                 uiObject.Visible = uiObject !== this.MainBtn ? uiObjects.includes(uiObject) : true;
             }
         }
@@ -57,10 +59,10 @@ class NavBarController<
      * NOTICE: If the NavbarController has a MainBtn, the MainBtn cannot be hidden.
      * @param uiObjects - An array of GuiObjects to be hidden.
      */
-    hideButtons(uiObjects: GuiObject[]) {
+    hideButtons(uiObjects: Button[]) {
         for (const child of this.NavBar.GetChildren()) {
-            if (child.IsA("GuiObject")) {
-                const uiObject = child as GuiObject;
+            if (child.IsA("TextButton") || child.IsA("ImageButton")) {
+                const uiObject = child as Button;
                 if (uiObjects.includes(uiObject)) {
                     // If a MainBtn exist, check if the ui is the main button and prevent visibility change
                     if (this.MainBtn && uiObject === this.MainBtn) continue;
