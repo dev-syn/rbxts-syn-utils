@@ -32,16 +32,16 @@ NavigationFrames extends Map<TextButton, Frame | ScrollingFrame>> {
     constructor(navBar: T, navigationableFrames: NavigationFrames, mainBtn?: TextButton);
     /**
      * Shows the given buttons inside the NavBar and hides all the others, excluding the MainBtn if assigned.
-     * @param uiObjects - A dictionary which keys are the UI Objects and the value is true, the UI Objects are then shown.
+     * @param uiObjects - An array of GuiObjects to be shown. Any GuiObject in the NavBar that is not included will be hidden.
      */
-    showButtons(uiObjects: Map<GuiObject, true>): void;
+    showButtons(uiObjects: GuiObject[]): void;
     /**
      * Hides the given buttons inside the Navbar.
      *
      * NOTICE: If the NavbarController has a MainBtn, the MainBtn cannot be hidden.
-     * @param uiObjects - A dictionary which keys are the UI Objects and the value is true, the UI Objects are then hidden.
+     * @param uiObjects - An array of GuiObjects to be hidden.
      */
-    hideButtons(uiObjects: Map<GuiObject, true>): void;
+    hideButtons(uiObjects: GuiObject[]): void;
     /**
      * Hides all the buttons inside the Navbar
      *

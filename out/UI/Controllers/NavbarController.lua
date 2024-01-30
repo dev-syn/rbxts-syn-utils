@@ -27,7 +27,7 @@ do
 		for _, child in self.NavBar:GetChildren() do
 			if child:IsA("GuiObject") then
 				local uiObject = child
-				uiObject.Visible = if uiObject ~= self.MainBtn then uiObjects[uiObject] ~= nil else true
+				uiObject.Visible = if uiObject ~= self.MainBtn then table.find(uiObjects, uiObject) ~= nil else true
 			end
 		end
 	end
@@ -35,7 +35,7 @@ do
 		for _, child in self.NavBar:GetChildren() do
 			if child:IsA("GuiObject") then
 				local uiObject = child
-				if uiObjects[uiObject] ~= nil then
+				if table.find(uiObjects, uiObject) ~= nil then
 					-- If a MainBtn exist, check if the ui is the main button and prevent visibility change
 					if self.MainBtn and uiObject == self.MainBtn then
 						continue
