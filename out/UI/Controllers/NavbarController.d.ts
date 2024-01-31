@@ -10,7 +10,7 @@ declare class NavBarController<
 /** The Frame or ScrollingFrame that is the Navbar. */
 T extends Frame | ScrollingFrame, 
 /** A map that stores the Navigation button to a Navigation Frame. */
-NavigationFrames extends Map<TextButton, Frame | ScrollingFrame>> {
+NavigationFrames extends Map<Button, Frame | ScrollingFrame>> {
     /**
      * The NavBar Instance that contains the navigation buttons normally with a UIListLayout but not required.
      * @typeParam T - The Frame | ScrollingFrame that contains the nav buttons
@@ -54,11 +54,11 @@ NavigationFrames extends Map<TextButton, Frame | ScrollingFrame>> {
      * @param navBtn The nav button to assign
      * @param frame The frame instance that belongs to the navBtn
      */
-    assignFrame(navBtn: TextButton, frame: Frame | ScrollingFrame): void;
+    assignFrame(navBtn: Button, frame: Frame | ScrollingFrame): void;
     /**
      * Shows a navigation frame using the given navBtn.
      * @param navBtn The navBtn that is associated to a nav frame.
      */
-    showFrame(navBtn: TextButton): void;
+    showFrame(navBtn: Button): void;
 }
 export = NavBarController;
