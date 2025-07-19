@@ -5,7 +5,7 @@
   "repository": "https://github.com/dev-syn/rbxts-syn-utils.git",
   "author": "dev-syn",
   "license": "MIT",
-  "main": "out/init.lua",
+  "main": "out/init.luau",
   "types": "out/index.d.ts",
   "files": [
     "out/**/*.lua",
