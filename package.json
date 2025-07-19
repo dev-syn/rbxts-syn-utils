@@ -1,0 +1,29 @@
+{
+  "name": "@rbxts/syn-utils",
+  "version": "0.1.0",
+  "description": "My roblox-ts utility project for general use. This was made for personal use and, it may not make sense for your use case.",
+  "repository": "https://github.com/dev-syn/rbxts-syn-utils.git",
+  "author": "dev-syn",
+  "license": "MIT",
+  "main": "out/init.lua",
+  "types": "out/index.d.ts",
+  "files": [
+    "out/**/*.lua",
+    "out/**/*.d.ts",
+    "!**/*.tsbuildinfo"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "rbxtsc",
+    "watch": "rbxtsc -w",
+    "prepublishOnly": "yarn run build"
+  },
+  "devDependencies": {
+    "@rbxts/compiler-types": "^3.0.0-types.0",
+    "@rbxts/types": "^1.0.864",
+    "roblox-ts": "^3.0.0",
+    "typescript": "^5.8.3"
+  }
+}

@@ -1,0 +1,17 @@
+{
+	"name": "Test_SynUtils",
+	"tree": {
+		"$className": "DataModel",
+
+		"ReplicatedStorage": {
+			"rbxts_include": {
+				"$path": "./include",
+				"node_modules": {
+					"$className": "Folder",
+					"@rbxts": { "$path": "./node_modules/@rbxts" }
+				}
+			},
+			"SynUtils": { "$path": "./default.project.json" }
+		}
+	}
+}
