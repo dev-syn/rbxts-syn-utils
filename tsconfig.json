@@ -10,7 +10,6 @@
 		"moduleResolution": "Node",
 		"noLib": true,
 		"resolveJsonModule": true,
-		"experimentalDecorators": true,
 		"forceConsistentCasingInFileNames": true,
 		"moduleDetection": "force",
 		"strict": true,
@@ -22,6 +21,7 @@
 		"outDir": "out",
 		"incremental": true,
 		"tsBuildInfoFile": "out/tsconfig.tsbuildinfo",
+		"experimentalDecorators": true,
 		"declaration": true,
 		"removeComments": true
 	}

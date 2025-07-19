@@ -6,7 +6,7 @@
   "author": "dev-syn",
   "license": "MIT",
   "main": "out/init.luau",
-  "types": "out/index.d.ts",
+  "typings": "out/index.d.ts",
   "files": [
     "out/**/*.lua",
     "out/**/*.d.ts",
