@@ -4,4 +4,3 @@
 *.tsbuildinfo
 sourcemap.json
 yarn.lock
-package-lock.json
