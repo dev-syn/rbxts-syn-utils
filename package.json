@@ -16,9 +16,9 @@
     "access": "public"
   },
   "scripts": {
-    "build": "rbxtsc",
-    "watch": "rbxtsc -w",
-    "prepublishOnly": "rbxtsc --type package"
+    "build": "rbxtsc --type package",
+    "watch": "rbxtsc -w --type package",
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@rbxts/compiler-types": "^3.0.0-types.0",
