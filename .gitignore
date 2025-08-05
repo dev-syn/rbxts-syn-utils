@@ -3,4 +3,5 @@
 /include
 *.tsbuildinfo
 sourcemap.json
+# Prevent local testing package lock file
 yarn.lock
