@@ -1,6 +1,6 @@
 {
   "name": "@rbxts/syn-utils",
-  "version": "0.3.0",
+  "version": "0.1.0",
   "description": "A utilities package that I use for personal development but is welcomed to be used, if you find yourself with any use cases :)",
   "repository": "https://github.com/dev-syn/rbxts-syn-utils.git",
   "author": "dev-syn",
@@ -25,5 +25,8 @@
     "@rbxts/types": "^1.0.867",
     "roblox-ts": "^3.0.0",
     "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "typedoc": "^0.28.9"
   }
 }
