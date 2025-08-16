@@ -1,5 +1,5 @@
 {
-	"name": "Test_SynUtils",
+	"name": "SynUtils",
 	"tree": {
 		"$className": "DataModel",
 
@@ -8,10 +8,11 @@
 				"$path": "./include",
 				"node_modules": {
 					"$className": "Folder",
-					"@rbxts": { "$path": "./node_modules/@rbxts" }
+					"@rbxts": { "$path": "./node_modules/@rbxts" },
+					"@flamework": { "$path": "./node_modules/@flamework" }
 				}
 			},
-			"SynUtils": { "$path": "./default.project.json" }
+			"SynUtils": { "$path": "out" }
 		}
 	}
 }

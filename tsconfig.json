@@ -14,7 +14,6 @@
 		"moduleDetection": "force",
 		"strict": true,
 		"target": "ESNext",
-		"typeRoots": ["node_modules/@rbxts"],
 
 		// configurable
 		"rootDir": "src",
@@ -22,7 +21,20 @@
 		"incremental": true,
 		"tsBuildInfoFile": "out/tsconfig.tsbuildinfo",
 		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
 		"declaration": true,
-		"removeComments": true
+
+		"plugins": [
+			{
+				"transform": "rbxts-transform-debug",
+				"enabled": true,
+				"verbose": false,
+				"version": 2
+
+			},
+			{ "transform": "rbxts-transformer-flamework" }
+		],
+
+		"typeRoots": ["node_modules/@rbxts", "node_modules/@flamework"],
 	}
 }

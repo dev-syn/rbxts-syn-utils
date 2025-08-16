@@ -17,16 +17,26 @@
   },
   "scripts": {
     "build": "rbxtsc --type package",
+		"build:test": "rbxtsc --type game --rojo test.project.json",
+		"rojo:build": "rojo build test.project.json -o out/tests/testPlace.rbxlx",
     "watch": "rbxtsc -w --type package",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@rbxts/compiler-types": "^3.0.0-types.0",
     "@rbxts/types": "^1.0.867",
+    "rbxts-transform-debug": "^2.2.0",
     "roblox-ts": "^3.0.0",
-    "typescript": "^5.9.2"
+		"typescript": "=5.5.3"
   },
   "dependencies": {
+    "@flamework/components": "^1.3.1",
+    "@flamework/core": "^1.3.1",
+    "@rbxts/t": "^3.2.1",
+    "rbxts-transformer-flamework": "^1.3.1",
     "typedoc": "^0.28.9"
-  }
+  },
+	"overrides": {
+		"typescript": "$typescript"
+	}
 }
