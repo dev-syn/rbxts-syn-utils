@@ -3,8 +3,7 @@
 	"flameworkVersion": "1.3.1",
 	"identifiers": {
 		"@rbxts/syn-utils:out/flamework/configuration/service@ConfigurationService": "@rbxts/syn-utils:flamework/configuration/service@ConfigurationService",
-		"@rbxts/syn-utils:out/flamework/configuration/component@ConfigurationComponent": "@rbxts/syn-utils:flamework/configuration/component@ConfigurationComponent",
-		"@rbxts/syn-utils:out/tests/testRunner@TestComponent": "@rbxts/syn-utils:tests/testRunner@TestComponent"
+		"@rbxts/syn-utils:out/flamework/configuration/component@ConfigurationComponent": "@rbxts/syn-utils:flamework/configuration/component@ConfigurationComponent"
 	},
 	"metadata": {},
 	"identifierPrefix": "@rbxts/syn-utils",
@@ -16,16 +15,6 @@
 				{
 					"internalId": "$:flamework@Service",
 					"name": "Service"
-				}
-			]
-		},
-		{
-			"filePath": "out\\tests\\testRunner.lua",
-			"internalId": "@rbxts/syn-utils:tests/testRunner@TestComponent",
-			"decorators": [
-				{
-					"internalId": "@rbxts/syn-utils:flamework/configuration/component@ConfigurationComponent",
-					"name": "ConfigurationComponent"
 				}
 			]
 		}
