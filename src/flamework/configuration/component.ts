@@ -1,8 +1,8 @@
 import { Modding } from '@flamework/core';
-import { Constructor } from '@flamework/core/out/utility';
 import { ComponentConfig } from '@flamework/components';
+import { t } from '@rbxts/t';
 
-type ConfigurationSchema = { [key: string]: Constructor<Instance> }
+type ConfigurationSchema = { [key: string]: t.check<any> }
 
 export interface ConfigurationComponentOptions extends ComponentConfig {
 	/** The map that stores the instance object reference configuration. */

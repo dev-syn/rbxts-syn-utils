@@ -34,7 +34,7 @@ export class ConfigurationService implements OnStart {
 					config.Parent = component.instance;
 				}
 
-				for (const [propName,expectedType] of pairs(schema)) {
+				for (const [propName,validator] of pairs(schema)) {
 					if (!typeIs(propName,"string")) return;
 					
 					let objectVal = config.FindFirstChild(propName);
@@ -53,9 +53,8 @@ export class ConfigurationService implements OnStart {
 						continue;
 					}
 
-					const expectedClassName = (expectedType as unknown as { name: string }).name as keyof Instances;
-					if (!t.instanceIsA(expectedClassName)(linkedValue)) {
-						$warn(`Invalid expected configuration value, expected a type of '${expectedClassName}' but got '${typeOf(linkedValue)}'.`);
+					if (!validator(linkedValue)) {
+						$warn(`Invalid expected configuration value for key '${propName}', expected a different type but got '${typeOf(linkedValue)}'.`);
 						continue;
 					}
 
