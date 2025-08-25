@@ -23,7 +23,7 @@ export interface ConfigurableOptions extends ComponentConfig {
 /**
  * @Decorator
  * Marks a class configurable component, this means including a Configuration into the components Instance.
- * Which can then set Instance references within Studio.
- * @metadata flamework:implements flamework:parameters injectable intrinsic-component-decorator
+ * Which can then set Instance references within Studio. This decorators add a property .configuration
+ * @metadata injectable intrinsic-component-decorator 
  */
 export const Configurable = Modding.createMetaDecorator<[ConfigurableOptions]>("Class");
